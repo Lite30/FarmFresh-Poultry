@@ -68,6 +68,29 @@
             padding: 40px 20px;
         }
 
+        /* Mission Statement */
+        .mission-statement {
+            background: #f9f9f9;
+            padding: 60px 20px;
+            text-align: center;
+            margin-bottom: 40px;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+
+        .mission-statement h2 {
+            color: #e67e22;
+            margin-bottom: 20px;
+            font-size: 2.5rem;
+        }
+
+        .mission-statement p {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
         /* Products section */
         .products {
             display: grid;
@@ -112,6 +135,20 @@
             padding: 30px;
             margin-bottom: 30px;
             box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+
+        /* Contact section */
+        .contact-section {
+            background: #fff;
+            border-radius: 10px;
+            padding: 40px;
+            margin: 40px 0;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+
+        .contact-section h2 {
+            color: #e67e22;
+            margin-bottom: 20px;
         }
 
         /* Buttons */
@@ -165,6 +202,7 @@
             background: rgba(0,0,0,0.5);
             justify-content: center;
             align-items: center;
+            z-index: 200;
         }
 
         .modal-content {
@@ -193,6 +231,17 @@
             border-radius: 4px;
         }
 
+        /* Success message */
+        .success-message {
+            display: none;
+            background: #4CAF50;
+            color: white;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 20px;
+            text-align: center;
+        }
+
         /* Responsive design */
         @media (max-width: 768px) {
             header h1 {
@@ -203,6 +252,10 @@
                 flex-direction: column;
                 text-align: center;
                 gap: 15px;
+            }
+            
+            .mission-statement h2 {
+                font-size: 2rem;
             }
         }
     </style>
@@ -217,6 +270,7 @@
     <nav>
         <ul>
             <li><a href="#home">Home</a></li>
+            <li><a href="#mission">Our Mission</a></li>
             <li><a href="#products">Products</a></li>
             <li><a href="#blog">Blog</a></li>
             <li><a href="#contact">Contact</a></li>
@@ -224,10 +278,15 @@
     </nav>
 
     <main class="main-content">
+        <section id="mission" class="mission-statement">
+            <h2>Our Mission</h2>
+            <p>At FarmFresh Poultry, we believe in sustainable farming practices that prioritize animal welfare and environmental stewardship. Our mission is to provide our community with the highest quality poultry products while maintaining ethical standards throughout our production process. We are committed to transparency, allowing our customers to know exactly where their food comes from and how it was raised. By supporting local agriculture and implementing regenerative farming methods, we strive to create a healthier food system for generations to come.</p>
+        </section>
+
         <section id="products" class="products">
             <div class="product-card">
                 <div class="product-image">
-                    <img src="assets/images/products/eggs.jpg" alt="Farm Fresh Eggs" width="300" height="200">
+                    <img src="/api/placeholder/300/200" alt="Farm Fresh Eggs" width="300" height="200">
                 </div>
                 <div class="product-info">
                     <h3>Farm Fresh Eggs</h3>
@@ -239,7 +298,7 @@
 
             <div class="product-card">
                 <div class="product-image">
-                    <img src="assets/images/products/chicken.jpg" alt="Organic Chicken" width="300" height="200">
+                    <img src="/api/placeholder/300/200" alt="Organic Chicken" width="300" height="200">
                 </div>
                 <div class="product-info">
                     <h3>Organic Chicken</h3>
@@ -256,6 +315,28 @@
                 <h3>Why Choose Free-Range Eggs?</h3>
                 <p>Our hens roam freely on green pastures, resulting in more nutritious and better-tasting eggs...</p>
                 <a href="#" class="btn">Read More</a>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section">
+            <h2>Contact Us</h2>
+            <form id="contactForm">
+                <div class="form-group">
+                    <label for="fullName">Full Name</label>
+                    <input type="text" id="fullName" required>
+                </div>
+                <div class="form-group">
+                    <label for="contactEmail">Email</label>
+                    <input type="email" id="contactEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+            <div id="contactSuccess" class="success-message">
+                Thank you for your message! We'll get back to you soon.
             </div>
         </section>
     </main>
@@ -309,7 +390,7 @@
             modal.style.display = 'none';
         }
 
-        // Form submission
+        // Order form submission
         document.getElementById('orderForm').addEventListener('submit', function(e) {
             e.preventDefault();
             
@@ -330,6 +411,33 @@
             
             // Show success message
             alert('Thank you for your order! We will contact you soon.');
+        });
+
+        // Contact form submission
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Collect form data
+            const formData = {
+                fullName: document.getElementById('fullName').value,
+                email: document.getElementById('contactEmail').value,
+                message: document.getElementById('message').value
+            };
+
+            // Here you would typically send this data to your backend
+            console.log('Contact form submitted:', formData);
+            
+            // Clear form
+            this.reset();
+            
+            // Show success message
+            const successMessage = document.getElementById('contactSuccess');
+            successMessage.style.display = 'block';
+            
+            // Hide success message after 5 seconds
+            setTimeout(function() {
+                successMessage.style.display = 'none';
+            }, 5000);
         });
 
         // Close modal when clicking outside
