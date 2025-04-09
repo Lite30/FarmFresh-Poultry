@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enterprise Application Architecture - FarmFresh Poultry</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            padding: 20px;
+            margin: 0;
+        }
+
+        h1, h2, h3 {
+            color: #e67e22;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #e67e22;
+        }
+
+        .org-chart {
+            max-width: 100%;
+            margin: 30px auto;
+            text-align: center;
+        }
+
+        .org-chart img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+
+        .role-section {
+            background: #f9f9f9;
+            border-radius: 5px;
+            padding: 15px;
+            margin-bottom: 15px;
+        }
+
+        .role-section h2 {
+            margin-top: 0;
+            font-size: 1.3rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .role-number {
+            display: inline-block;
+            background: #e67e22;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 30px;
+            margin-right: 10px;
+        }
+
+        .role-description {
+            margin-bottom: 10px;
+        }
+
+        .role-responsibilities {
+            margin-left: 40px;
+        }
+
+        .role-responsibilities li {
+            margin-bottom: 8px;
+        }
+
+        .footer {
+            margin-top: 30px;
+            font-style: italic;
+            border-top: 1px solid #ddd;
+            padding-top: 15px;
+        }
+        
+        .department-header {
+            background: #e67e22;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            margin: 30px 0 15px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Enterprise Application Architecture</h1>
+    
+    <p>Our organizational structure is designed to ensure efficient operations, clear lines of communication, and accountability at all levels. Each role plays a vital part in maintaining our commitment to quality, sustainability, and customer satisfaction in our poultry business.</p>
+    
+    <div class="org-chart">
+        <img src="assets/images/Architecture modell.jpg" alt="FarmFresh Poultry Organizational Structure" />
+        <p><em>FarmFresh Poultry Organizational Structure</em></p>
+    </div>
+
+    <h3>Our organizational structure is divided into three main management levels:</h3>
+    
+    <div class="department-header">
+        <h2>Senior Management</h2>
+    </div>
+    
+    <div class="role-section">
+        <h2><span class="role-number">1</span>Chief Executive Officer (CEO)</h2>
+        <div class="role-description">
+            <p>The CEO is responsible for the overall vision, strategy, and leadership of FarmFresh Poultry.</p>
+        </div>
+        <div class="role-responsibilities">
+            <ul>
+                <li>Sets company objectives and ensures alignment with our mission of providing high-quality poultry products</li>
+                <li>Makes key decisions about resource allocation and expansion opportunities</li>
+                <li>Ensures all operations adhere to our Code of Ethics</li>
+                <li>Represents the company to stakeholders, partners, and the public</li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="role-section">
+        <h2><span class="role-number">2</span>Chief Financial Officer (CFO)</h2>
+        <div class="role-description">
+            <p>The CFO oversees all financial operations and strategic financial planning for our poultry business.</p>
+        </div>
+        <div class="role-responsibilities">
+            <ul>
+                <li>Manages budgeting for all departments and monitors financial performance</li>
+                <li>Ensures fair pricing strategies that balance profitability with customer value</li>
+                <li>Oversees financial compliance with tax and business regulations</li>
+                <li>Develops financial strategies to support sustainable growth and innovation</li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="role-section">
+        <h2><span class="role-number">3</span>Chief Marketing Officer (CMO)</h2>
+        <div class="role-description">
+            <p>The CMO leads our marketing strategies to promote our eggs, meat, and chicks to target customers.</p>
+        </div>
+        <div class="role-responsibilities">
+            <ul>
+                <li>Develops ethical marketing campaigns that accurately represent our poultry products</li>
+                <li>Identifies market opportunities for new product lines</li>
+                <li>Oversees brand management and customer communications</li>
+                <li>Ensures marketing materials reflect our commitment to sustainable farming practices</li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="role-section">
+        <h2><span class="role-number">4</span>Chief Research Officer (CRO)</h2>
+        <div class="role-description">
+            <p>The CRO leads research initiatives to improve our poultry farming practices and product quality.</p>
+        </div>
+        <div class="role-responsibilities">
+            <ul>
+                <li>Researches innovative breeding techniques to enhance poultry health and productivity</li>
+                <li>Develops strategies to improve egg quality and production rates</li>
+                <li>Studies environmentally sustainable farming methods</li>
+                <li>Collaborates with agricultural universities and research institutions</li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="role-section">
+        <h2><span class="role-number">5</span>Chief Data Officer (CDO)</h2>
+        <div class="role-description">
+            <p>The CDO oversees data management, security, and analytics for the entire poultry operation.</p>
+        </div>
+        <div class="role-responsibilities">
+            <ul>
+                <li>Implements robust data protection measures for customer and business information</li>
+                <li>Designs data collection systems to monitor poultry health and production metrics</li>
+                <li>Develops analytics tools to optimize feed-to-yield ratios</li>
+                <li>Ensures compliance with data privacy regulations</li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="department-header">
+        <h2>Middle Management</h2>
+    </div>
+    
+    <div class="role-section">
+        <h2><span class="role-number">6</span>HR Manager</h2>
+        <div class="role-description">
+            <p>The HR Manager oversees all aspects of human resources for our poultry business.</p>
+        </div>
+        <div class="role-responsibilities">
+            <ul>
+                <li>Recruits qualified personnel with knowledge in poultry farming and production</li>
+                <li>Develops training programs on ethical handling of poultry</li>
+                <li>Ensures workplace safety and compliance with labor laws</li>
+                <li>Fosters an inclusive work environment as outlined in our Code of Ethics</li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="role-section">
+        <h2><span class="role-number">7</span>Sales Manager</h2>
+        <div class="role-description">
+            <p>The Sales Manager develops and implements strategies to sell our poultry products to various markets.</p>
+        </div>
+        <div class="role-responsibilities">
+            <ul>
+                <li>Builds relationships with retailers, restaurants, and distributors</li>
+                <li>Sets sales targets and develops pricing strategies for eggs, meat, and chicks</li>
+                <li>Trains sales staff on product knowledge and ethical selling practices</li>
+                <li>Analyzes market trends to identify growth opportunities</li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="role-section">
+        <h2><span class="role-number">8</span>Production Supervisor</h2>
+        <div class="role-description">
+            <p>The Production Supervisor oversees daily poultry farming operations and egg production.</p>
+        </div>
+        <div class="role-responsibilities">
+            <ul>
+                <li>Manages the breeding cycle and egg collection processes</li>
+                <li>Ensures humane treatment of chickens following our ethical guidelines</li>
+                <li>Monitors feed quality and consumption to optimize production</li>
+                <li>Implements biosecurity measures to prevent disease</li>
+                <li>Coordinates with processing teams to ensure timely delivery of products</li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="department-header">
+        <h2>Operational Management</h2>
+    </div>
+    
+    <div class="role-section">
+        <h2><span class="role-number">9</span>Poultry Farm Worker</h2>
+        <div class="role-description">
+            <p>Poultry Farm Workers handle the day-to-day care of our chickens and egg collection.</p>
+        </div>
+        <div class="role-responsibilities">
+            <ul>
+                <li>Provides daily care for chickens including feeding, watering, and health monitoring</li>
+                <li>Collects eggs carefully to prevent damage and maintains cleanliness</li>
+                <li>Cleans coops and maintains farming equipment</li>
+                <li>Reports any health concerns or unusual behaviors in the flock</li>
+                <li>Follows strict biosecurity protocols to ensure flock health</li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="role-section">
+        <h2><span class="role-number">10</span>Sales and Marketing Coordinator</h2>
+        <div class="role-description">
+            <p>The Sales and Marketing Coordinator supports the sales and marketing teams in promoting our poultry products.</p>
+        </div>
+        <div class="role-responsibilities">
+            <ul>
+                <li>Processes orders and coordinates deliveries of eggs, meat, and chicks</li>
+                <li>Assists with creating promotional materials that highlight our ethical farming practices</li>
+                <li>Maintains customer databases and responds to inquiries</li>
+                <li>Gathers customer feedback to improve product offerings</li>
+                <li>Supports the organization of promotional events and farmer's market appearances</li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="role-section">
+        <h2><span class="role-number">11</span>Accountant</h2>
+        <div class="role-description">
+            <p>The Accountant manages daily financial operations and record-keeping for our poultry business.</p>
+        </div>
+        <div class="role-responsibilities">
+            <ul>
+                <li>Processes payroll for all farm and office staff</li>
+                <li>Tracks expenses related to feed, equipment, and healthcare for poultry</li>
+                <li>Manages accounts receivable for egg and poultry sales</li>
+                <li>Prepares monthly financial reports and assists with budget planning</li>
+                <li>Ensures financial transparency as outlined in our Code of Ethics</li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="role-section">
+        <h2><span class="role-number">12</span>Design Supervisor</h2>
+        <div class="role-description">
+            <p>The Design Supervisor oversees the design of packaging, facilities, and production systems for our poultry business.</p>
+        </div>
+        <div class="role-responsibilities">
+            <ul>
+                <li>Designs environmentally friendly packaging for eggs and poultry products</li>
+                <li>Plans efficient coop layouts that prioritize chicken welfare</li>
+                <li>Develops systems for egg collection and processing that minimize waste</li>
+                <li>Creates marketing materials that accurately represent our products</li>
+                <li>Ensures all designs align with our sustainability commitment</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="department-header">
+        <h2>Departmental Structure</h2>
+    </div>
+    
+    <div class="role-section">
+        <h2><span class="role-number">A</span>Human Resources</h2>
+        <div class="role-description">
+            <p>Our Human Resources department ensures we have skilled, ethical professionals at every level of our poultry operation.</p>
+        </div>
+        <div class="role-responsibilities">
+            <ul>
+                <li>Recruits staff with specialized knowledge in poultry farming and production</li>
+                <li>Provides ongoing training on ethical animal handling and food safety</li>
+                <li>Develops performance evaluation systems aligned with our values</li>
+                <li>Ensures compliance with labor laws and workplace safety regulations</li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="role-section">
+        <h2><span class="role-number">B</span>Sales and Marketing</h2>
+        <div class="role-description">
+            <p>Our Sales and Marketing department connects our quality poultry products with customers who value ethically raised food.</p>
+        </div>
+        <div class="role-responsibilities">
+            <ul>
+                <li>Develops truthful marketing campaigns highlighting our sustainable practices</li>
+                <li>Builds relationships with retailers, restaurants, and direct consumers</li>
+                <li>Creates educational materials about the benefits of our farming methods</li>
+                <li>Gathers market intelligence to guide product development</li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="role-section">
+        <h2><span class="role-number">C</span>Finance and Accounting</h2>
+        <div class="role-description">
+            <p>Our Finance and Accounting department ensures financial sustainability while maintaining ethical business practices.</p>
+        </div>
+        <div class="role-responsibilities">
+            <ul>
+                <li>Manages cash flow to support continuous operations and fair supplier payments</li>
+                <li>Develops pricing strategies that balance affordability with sustainable production costs</li>
+                <li>Ensures transparent financial reporting</li>
+                <li>Secures funding for facility improvements and expansion</li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="role-section">
+        <h2><span class="role-number">D</span>Production and Manufacturing</h2>
+        <div class="role-description">
+            <p>Our Production and Manufacturing department oversees the entire lifecycle of our poultry products from breeding to packaging.</p>
+        </div>
+        <div class="role-responsibilities">
+            <ul>
+                <li>Implements humane breeding and raising practices for healthy chickens</li>
+                <li>Manages egg collection, grading, and packaging with minimal waste</li>
+                <li>Maintains strict quality control standards for all products</li>
+                <li>Ensures environmentally responsible waste management</li>
+                <li>Develops innovative solutions to improve efficiency while maintaining ethical standards</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>Our enterprise architecture is designed to support our mission of providing high-quality, ethically produced poultry products while maintaining environmental responsibility and community engagement. Each role contributes to our overall commitment to integrity, customer satisfaction, and sustainable business practices.</p>
+    </div>
+</body>
+</html>
